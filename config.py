@@ -1,4 +1,4 @@
-""" File with settings and configs for the project"""
+""" File with settings and configs for the project """
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -9,6 +9,7 @@ class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_file='.env')
 
     postgres: PostgresDsn
+    postgres_test: PostgresDsn
 
 
 settings = Settings()
